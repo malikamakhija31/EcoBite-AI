@@ -1,0 +1,16 @@
+forecast_date,item_name,food_category,predicted_demand,recommended_preparation,extra_buffer_quantity
+2023-12-04,Panipuri,Fast Food,15,16,1
+2023-12-04,Sandwich,Fast Food,12,13,1
+2023-12-04,Cold coffee,Beverages,11,12,1
+2023-12-04,Gulab Jamun,Sweets & Desserts,9,10,1
+2023-12-04,Masala Chai,Beverages,9,10,1
+2023-12-04,Frankie,Fast Food,7,8,1
+2023-12-04,Aalopuri,Fast Food,7,8,1
+2023-12-04,Dal Rice,Main Course,7,8,1
+2023-12-04,Veg Thali,Main Course,7,8,1
+2023-12-04,Sugarcane juice,Beverages,6,7,1
+2023-12-04,Vadapav,Fast Food,6,7,1
+2023-12-04,Paneer Butter Masala,Main Course,6,7,1
+2023-12-04,Ice Cream,Sweets & Desserts,3,4,1
+2023-12-04,Paneer Tikka,Starters,2,3,1
+2023-12-04,Veg Spring Roll,Starters,2,3,1

@@ -1,0 +1,16 @@
+forecast_date,item_name,food_category,item_price,quantity,previous_sales,day_of_week,month,predicted_demand,recommended_preparation
+2023-12-04,Panipuri,Fast Food,20.0,34,34,0,12,15,16
+2023-12-04,Sandwich,Fast Food,60.0,6,6,0,12,12,13
+2023-12-04,Cold coffee,Beverages,40.0,27,27,0,12,11,12
+2023-12-04,Gulab Jamun,Sweets & Desserts,50.0,11,11,0,12,9,10
+2023-12-04,Masala Chai,Beverages,30.0,7,7,0,12,9,10
+2023-12-04,Frankie,Fast Food,50.0,26,26,0,12,7,8
+2023-12-04,Aalopuri,Fast Food,20.0,2,2,0,12,7,8
+2023-12-04,Dal Rice,Main Course,130.0,8,8,0,12,7,8
+2023-12-04,Veg Thali,Main Course,160.0,7,7,0,12,7,8
+2023-12-04,Sugarcane juice,Beverages,25.0,14,14,0,12,6,7
+2023-12-04,Vadapav,Fast Food,20.0,11,11,0,12,6,7
+2023-12-04,Paneer Butter Masala,Main Course,220.0,6,6,0,12,6,7
+2023-12-04,Ice Cream,Sweets & Desserts,80.0,2,2,0,12,3,4
+2023-12-04,Paneer Tikka,Starters,180.0,2,2,0,12,2,3
+2023-12-04,Veg Spring Roll,Starters,120.0,2,2,0,12,2,3

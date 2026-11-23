@@ -1,0 +1,141 @@
+{
+  "dataset_name": "restaurant_inventory_demo",
+  "description": "Synthetic sample inventory records for testing the Smart Food Waste Prediction and Management Data Pipeline. These are not verified real-world records.",
+  "records": [
+    {
+      "inventory_id": "INV001",
+      "item_name": "Beverages",
+      "stock_quantity": 120,
+      "unit": "servings",
+      "reorder_level": 30,
+      "supplier": "Supplier A",
+      "record_date": "2023-12-01"
+    },
+    {
+      "inventory_id": "INV002",
+      "item_name": "Fast Food",
+      "stock_quantity": 85,
+      "unit": "servings",
+      "reorder_level": 25,
+      "supplier": "Supplier B",
+      "record_date": "2023-12-01"
+    },
+    {
+      "inventory_id": "INV003",
+      "item_name": "Main Course",
+      "stock_quantity": 140,
+      "unit": "servings",
+      "reorder_level": 35,
+      "supplier": "Supplier C",
+      "record_date": "2023-12-01"
+    },
+    {
+      "inventory_id": "INV004",
+      "item_name": "Starters",
+      "stock_quantity": 70,
+      "unit": "servings",
+      "reorder_level": 20,
+      "supplier": "Supplier A",
+      "record_date": "2023-12-01"
+    },
+    {
+      "inventory_id": "INV005",
+      "item_name": "Sweets & Desserts",
+      "stock_quantity": 60,
+      "unit": "servings",
+      "reorder_level": 15,
+      "supplier": "Supplier D",
+      "record_date": "2023-12-01"
+    },
+    {
+      "inventory_id": "INV006",
+      "item_name": "Beverages",
+      "stock_quantity": 105,
+      "unit": "servings",
+      "reorder_level": 30,
+      "supplier": "Supplier A",
+      "record_date": "2023-12-02"
+    },
+    {
+      "inventory_id": "INV007",
+      "item_name": "Fast Food",
+      "stock_quantity": 72,
+      "unit": "servings",
+      "reorder_level": 25,
+      "supplier": "Supplier B",
+      "record_date": "2023-12-02"
+    },
+    {
+      "inventory_id": "INV008",
+      "item_name": "Main Course",
+      "stock_quantity": 126,
+      "unit": "servings",
+      "reorder_level": 35,
+      "supplier": "Supplier C",
+      "record_date": "2023-12-02"
+    },
+    {
+      "inventory_id": "INV009",
+      "item_name": "Starters",
+      "stock_quantity": 63,
+      "unit": "servings",
+      "reorder_level": 20,
+      "supplier": "Supplier A",
+      "record_date": "2023-12-02"
+    },
+    {
+      "inventory_id": "INV010",
+      "item_name": "Sweets & Desserts",
+      "stock_quantity": 54,
+      "unit": "servings",
+      "reorder_level": 15,
+      "supplier": "Supplier D",
+      "record_date": "2023-12-02"
+    },
+    {
+      "inventory_id": "INV011",
+      "item_name": "Beverages",
+      "stock_quantity": 98,
+      "unit": "servings",
+      "reorder_level": 30,
+      "supplier": "Supplier A",
+      "record_date": "2023-12-03"
+    },
+    {
+      "inventory_id": "INV012",
+      "item_name": "Fast Food",
+      "stock_quantity": 68,
+      "unit": "servings",
+      "reorder_level": 25,
+      "supplier": "Supplier B",
+      "record_date": "2023-12-03"
+    },
+    {
+      "inventory_id": "INV013",
+      "item_name": "Main Course",
+      "stock_quantity": 118,
+      "unit": "servings",
+      "reorder_level": 35,
+      "supplier": "Supplier C",
+      "record_date": "2023-12-03"
+    },
+    {
+      "inventory_id": "INV014",
+      "item_name": "Starters",
+      "stock_quantity": 57,
+      "unit": "servings",
+      "reorder_level": 20,
+      "supplier": "Supplier A",
+      "record_date": "2023-12-03"
+    },
+    {
+      "inventory_id": "INV015",
+      "item_name": "Sweets & Desserts",
+      "stock_quantity": 48,
+      "unit": "servings",
+      "reorder_level": 15,
+      "supplier": "Supplier D",
+      "record_date": "2023-12-03"
+    }
+  ]
+}

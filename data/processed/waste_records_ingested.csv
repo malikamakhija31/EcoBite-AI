@@ -1,0 +1,16 @@
+Record ID,Date,Food Category,Waste Quantity (servings),Waste Reason,Meal Period
+W001,2023-12-01,Beverages,4,Expired or unsold,Evening
+W002,2023-12-01,Fast Food,7,Over-preparation,Dinner
+W003,2023-12-01,Main Course,9,Customer leftovers,Dinner
+W004,2023-12-01,Starters,3,Over-preparation,Lunch
+W005,2023-12-01,Sweets & Desserts,5,Expired or unsold,Evening
+W006,2023-12-02,Beverages,3,Expired or unsold,Evening
+W007,2023-12-02,Fast Food,6,Over-preparation,Dinner
+W008,2023-12-02,Main Course,8,Customer leftovers,Dinner
+W009,2023-12-02,Starters,4,Over-preparation,Lunch
+W010,2023-12-02,Sweets & Desserts,4,Expired or unsold,Evening
+W011,2023-12-03,Beverages,5,Expired or unsold,Evening
+W012,2023-12-03,Fast Food,8,Over-preparation,Dinner
+W013,2023-12-03,Main Course,10,Customer leftovers,Dinner
+W014,2023-12-03,Starters,2,Over-preparation,Lunch
+W015,2023-12-03,Sweets & Desserts,6,Expired or unsold,Evening

@@ -1,0 +1,16 @@
+inventory_id,item_name,stock_quantity,unit,reorder_level,supplier,record_date
+INV001,Beverages,120,servings,30,Supplier A,2023-12-01
+INV002,Fast Food,85,servings,25,Supplier B,2023-12-01
+INV003,Main Course,140,servings,35,Supplier C,2023-12-01
+INV004,Starters,70,servings,20,Supplier A,2023-12-01
+INV005,Sweets & Desserts,60,servings,15,Supplier D,2023-12-01
+INV006,Beverages,105,servings,30,Supplier A,2023-12-02
+INV007,Fast Food,72,servings,25,Supplier B,2023-12-02
+INV008,Main Course,126,servings,35,Supplier C,2023-12-02
+INV009,Starters,63,servings,20,Supplier A,2023-12-02
+INV010,Sweets & Desserts,54,servings,15,Supplier D,2023-12-02
+INV011,Beverages,98,servings,30,Supplier A,2023-12-03
+INV012,Fast Food,68,servings,25,Supplier B,2023-12-03
+INV013,Main Course,118,servings,35,Supplier C,2023-12-03
+INV014,Starters,57,servings,20,Supplier A,2023-12-03
+INV015,Sweets & Desserts,48,servings,15,Supplier D,2023-12-03
