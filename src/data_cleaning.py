@@ -35,11 +35,13 @@ def clean_sales_data():
             dates = pd.to_datetime(
                 raw_dates,
                 format="mixed",
+                dayfirst=True,
                 errors="coerce"
             )
         except (TypeError, ValueError):
             dates = pd.to_datetime(
                 raw_dates,
+                dayfirst=True,
                 errors="coerce"
             )
 

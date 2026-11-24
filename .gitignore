@@ -1,0 +1,13 @@
+
+# Environment and secrets
+.env
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Data backups
+data/raw_backup/
+

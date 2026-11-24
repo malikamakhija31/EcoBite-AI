@@ -1,3 +1,5 @@
+from database.db_connection import engine
+from sqlalchemy import text
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -502,14 +504,32 @@ def apply_dark_layout(fig, height=360):
 def load_all_data():
     data = {}
     
-    # 1. Sales Data
-    sales_file = DATA_DIR / "food_sales_cleaned.csv"
-    if sales_file.exists():
-        df_sales = pd.read_csv(sales_file)
-        df_sales["date"] = pd.to_datetime(df_sales["date"], errors="coerce")
-        data["sales"] = df_sales
-    else:
-        data["sales"] = pd.DataFrame()
+    # 1. Sales Data (Load from PostgreSQL with CSV fallback)
+    loaded_from_db = False
+    try:
+        with engine.connect() as conn:
+            df_sales = pd.read_sql(text("SELECT * FROM sales"), conn)
+            if not df_sales.empty:
+                df_sales["date"] = pd.to_datetime(df_sales["date"], errors="coerce")
+                for col in ["quantity", "prepared_qty", "wasted_qty", "item_price", "transaction_amount"]:
+                    if col in df_sales.columns:
+                        df_sales[col] = pd.to_numeric(df_sales[col], errors="coerce")
+                data["sales"] = df_sales
+                loaded_from_db = True
+    except Exception:
+        loaded_from_db = False
+
+    if not loaded_from_db:
+        sales_file = DATA_DIR / "food_sales_cleaned.csv"
+        if sales_file.exists():
+            df_sales = pd.read_csv(sales_file)
+            df_sales["date"] = pd.to_datetime(df_sales["date"], errors="coerce")
+            for col in ["quantity", "prepared_qty", "wasted_qty", "item_price", "transaction_amount"]:
+                if col in df_sales.columns:
+                    df_sales[col] = pd.to_numeric(df_sales[col], errors="coerce")
+            data["sales"] = df_sales
+        else:
+            data["sales"] = pd.DataFrame()
         
     # 2. Demand Predictions
     pred_file = DATA_DIR / "demand_predictions.csv"
@@ -534,19 +554,46 @@ def load_all_data():
     else:
         data["evaluation"] = pd.DataFrame()
         
-    # 5. Inventory
-    inv_file = DATA_DIR / "inventory_cleaned.csv"
-    if inv_file.exists():
-        data["inventory"] = pd.read_csv(inv_file)
-    else:
-        data["inventory"] = pd.DataFrame()
+    # 5. Inventory (Load from PostgreSQL with CSV fallback)
+    loaded_inv_db = False
+    try:
+        with engine.connect() as conn:
+            df_inv = pd.read_sql(text("SELECT * FROM inventory"), conn)
+            if not df_inv.empty:
+                for col in ["stock_quantity", "reorder_level"]:
+                    if col in df_inv.columns:
+                        df_inv[col] = pd.to_numeric(df_inv[col], errors="coerce")
+                data["inventory"] = df_inv
+                loaded_inv_db = True
+    except Exception:
+        loaded_inv_db = False
+
+    if not loaded_inv_db:
+        inv_file = DATA_DIR / "inventory_cleaned.csv"
+        if inv_file.exists():
+            data["inventory"] = pd.read_csv(inv_file)
+        else:
+            data["inventory"] = pd.DataFrame()
         
-    # 6. Waste Records
-    waste_rec_file = DATA_DIR / "waste_records_cleaned.csv"
-    if waste_rec_file.exists():
-        data["waste_records"] = pd.read_csv(waste_rec_file)
-    else:
-        data["waste_records"] = pd.DataFrame()
+    # 6. Waste Records (Load from PostgreSQL with CSV fallback)
+    loaded_waste_db = False
+    try:
+        with engine.connect() as conn:
+            df_wr = pd.read_sql(text("SELECT * FROM html_waste_records"), conn)
+            if not df_wr.empty:
+                if "waste_quantity" in df_wr.columns:
+                    df_wr["waste_quantity"] = pd.to_numeric(df_wr["waste_quantity"], errors="coerce")
+                data["waste_records"] = df_wr
+                loaded_waste_db = True
+    except Exception:
+        loaded_waste_db = False
+
+    if not loaded_waste_db:
+        waste_rec_file = DATA_DIR / "waste_records_cleaned.csv"
+        if waste_rec_file.exists():
+            data["waste_records"] = pd.read_csv(waste_rec_file)
+        else:
+            data["waste_records"] = pd.DataFrame()
 
     return data
 
